@@ -1,0 +1,49 @@
+===============================================================================
+===============================================================================
+									Costea Mihai
+										322CB
+									  Tema1 POO
+===============================================================================
+===============================================================================
+
+Programul este format din 4 fisiere .java:
+
+Process.java
+	Contine o clasa abstracta publica din care se vor exinde toate cele 7 
+pe care trebuia sa le implementam. Ea contine un camp de rezultat un camp
+de nume si un camp unde ese un string pentru a iti putea da seama din exterior
+ce fel e proces este. Ea contine metona de get result care se folosese doar cand
+trebuie calclat rezultatul procesulu (spe exemplu nu se mai calculeaza daca 
+pocesul este deja in cache). S-a supreascris metoda de equals detalii javadoc.
+
+===============================================================================
+
+Scheduler.java 
+	Este o clasa abstracta din care se extind cele 3 scheduleres prezentate in
+tema. Nu e nimic special cu ea, ea efectiv primeste toate informatiile citite
+ca input si scrie in fisier in baza informatiilor oututul prin intermediul 
+metodei run.
+
+===============================================================================
+
+Cache.java 
+	Este o clasa abstracta din care deriva cele 2 clase care implementeaza 
+functionalitatile de cache prezentate in tema. Ea face acest lucru prin
+intermediul metodei add, care este diferita in functie de cache-ul ales.
+Dar ideea de adaugare este aceasi:
+1. Se cauta mai intai daca este procesul respectiv in cache si daca da se da
+return la el si dupa se extrage informatia prin intermediul get-ului getResult
+din process.
+2. Daca nu e va introduce urmatorul element in cache in functie de cache-ul ales
+
+===============================================================================
+
+IO.java
+	Clasa responsabila cu citirrea datelor din fisier. In aceasta clasa se afla 
+si procedura main care va crea pe baza datelor citite prin intermediul obiectului
+"io" cachee-ul si scheduler-ul respectiv. Dupa care toate informatiile sunt
+"pasate" scheduler-ului iar prin intermediul metodei run mentionate mai sus se
+va scrie in fisier output-ul.
+
+===============================================================================
+===============================================================================
